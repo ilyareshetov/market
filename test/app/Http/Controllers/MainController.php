@@ -103,7 +103,6 @@ class MainController extends Controller
 
         //Подгружаем информацию о товарах
         $products = Product::whereIn('id', $data['cartProducts'])->get();
-
         return view('cart', ['data' => $data, 'products' => $products]);
     }
 
